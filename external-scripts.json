@@ -1,6 +1,6 @@
 [
     "hubot-help",
     "hubot-thank-you",
-    "hubot-business-cat",
-    "hubot-seen"
+    "hubot-seen",
+    "hubot-google-images"
 ]
