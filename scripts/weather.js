@@ -5,10 +5,10 @@
 //   None
 //
 // Configuration:
-//   None
+//   Add Open Weather Map API key to environment variable: HUBOT_OWM_APIKEY
 //
 // Commands:
-//   hubot what's the weather?  - returns current temp
+//   hubot weather in CITY?  - returns current temp
 
 var dotenv = require('dotenv');
 dotenv.load();

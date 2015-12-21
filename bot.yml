@@ -1,8 +1,8 @@
-name: nodebot
+name: Marvin
 description: A simple hubot based node bot sample for Beep Boop
-avatar: hubot.png
+avatar: marvin.png
 config:
-  - name: OPTION
-    friendly_name: Some Unnecessary Option
-    info: This is an unnecessary option
-    default: the default value
+  - name: HUBOT_OWM_APIKEY
+    friendly_name: OpenWeatherMap API
+    info: API Key for OpenWeatherMap
+    type: secret
