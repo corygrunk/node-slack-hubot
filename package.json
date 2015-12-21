@@ -4,6 +4,7 @@
   "private": true,
   "description": "BeepBoop node slack hubut",
   "dependencies": {
+    "dotenv": "^1.2.0",
     "hubot": "^2.16.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.2.5",
