@@ -5,7 +5,6 @@
   "description": "BeepBoop node slack hubut",
   "dependencies": {
     "dotenv": "^1.2.0",
-    "htmlparser": "^1.7.7",
     "hubot": "^2.16.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.2.5",
@@ -14,8 +13,7 @@
     "hubot-scripts": "^2.16.2",
     "hubot-seen": "^0.2.3",
     "hubot-slack": "^3.3.0",
-    "hubot-thank-you": "0.0.3",
-    "soupselect": "^0.2.0"
+    "hubot-thank-you": "0.0.3"
   },
   "engines": {
     "node": "4.2.x"
