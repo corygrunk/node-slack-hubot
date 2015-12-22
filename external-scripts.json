@@ -4,5 +4,5 @@
     "hubot-seen",
     "hubot-google-images",
     "hubot-jira-linkifier",
-    "hubot-slack-whitelist-middleware"
+    "hubot-slack-blacklist-middleware"
 ]
