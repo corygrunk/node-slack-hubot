@@ -3,9 +3,9 @@ description: A simple hubot based node bot sample for Beep Boop
 avatar: marvin.png
 config:
 - name: HUBOT_WHITELIST
-	friendly_name: Bot Channel Whitelist
-	info: Make the bot active in these channels - comma seperated/no spaces
-	type: text
+  friendly_name: Bot Channel Whitelist
+  info: Make the bot active in these channels - comma seperated/no spaces
+  type: text
 - name: HUBOT_OWM_APIKEY
   friendly_name: OpenWeatherMap API
   info: API Key for OpenWeatherMap
