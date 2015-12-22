@@ -6,3 +6,11 @@ config:
     friendly_name: OpenWeatherMap API
     info: API Key for OpenWeatherMap
     type: secret
+  - name: HUBOT_JIRA_LINKIFIER_JIRA_URL
+    friendly_name: Jira Linkafier URL
+    info: Jira URL - https://jira.mydomain.com
+    type: text
+  - name: HUBOT_JIRA_LINKIFIER_PROJECT_PREFIXES
+    friendly_name: Jira Project Prefixes
+    info: Jira Project Prefixes - comma seperated
+    type: text

@@ -2,5 +2,6 @@
     "hubot-help",
     "hubot-thank-you",
     "hubot-seen",
-    "hubot-google-images"
+    "hubot-google-images",
+    "hubot-jira-linkifier"
 ]
