@@ -1,5 +1,6 @@
 [
 	"marvin-responses",
 	"answer",
-	"weather"
+	"weather",
+	"hubot-jira-linkifier"
 ]

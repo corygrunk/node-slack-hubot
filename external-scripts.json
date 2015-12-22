@@ -3,6 +3,5 @@
     "hubot-thank-you",
     "hubot-seen",
     "hubot-google-images",
-    "hubot-jira-linkifier",
-    "hubot-slack-blacklist-middleware"
+    "hubot-slack-whitelist-middleware"
 ]
