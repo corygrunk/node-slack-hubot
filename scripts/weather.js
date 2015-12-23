@@ -29,6 +29,7 @@ module.exports = function(robot) {
           var message0 = 'It\'s always cloudy for me, but in *' + data.name + '*, it is *' + currentTemp + '* and  *' + currentConditions + '*.';
           var message1 = 'Ugh, if you must know what it\'s like outside in *' + data.name + '*, it is *' + currentTemp + '* and  *' + currentConditions + '*.';
           var message2 = 'A brain the size of a planet and I\'m reporting the weather. Very well, in *' + data.name + '*, it is *' + currentTemp + '* and  *' + currentConditions + '*.';
+          var randomMsg = [message0,message1,message2];
           msg.reply(randomMsg[Math.floor((Math.random()*(randomMsg.length)))]);
         }
       });

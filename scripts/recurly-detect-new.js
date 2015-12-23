@@ -12,7 +12,7 @@
 //   None
 
 var Recurly = require('../lib/node-recurly');
-var recurly = new Recurly(require('../lib/node-recurly/config'));
+var recurly = new Recurly(require('../recurly-config'));
 var dotenv = require('dotenv');
 dotenv.load();
 
