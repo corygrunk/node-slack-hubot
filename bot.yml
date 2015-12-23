@@ -18,11 +18,3 @@ config:
   friendly_name: Jira Project Prefixes
   info: Jira Project Prefixes - comma seperated
   type: text
-- name: HUBOT_RECURLY_PRIVATE_API
-  friendly_name: Recurly Private API
-  info: API Key Recurly
-  type: secret
-- name: HUBOT_RECURLY_SUBDOMAIN
-  friendly_name: Recurly Subdomain
-  info: Recurly Subdomain
-  type: text
