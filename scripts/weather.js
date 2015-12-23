@@ -8,7 +8,7 @@
 //   Add Open Weather Map API key to environment variable: HUBOT_OWM_APIKEY
 //
 // Commands:
-//   hubot weather in <city>?  - returns current temp
+//   weather in <city>?  - returns current temp
 
 var dotenv = require('dotenv');
 dotenv.load();
@@ -24,8 +24,12 @@ module.exports = function(robot) {
         var data;
         data = JSON.parse(body);
         if (data.cod == '200') {
+          var currentConditions = data.weather[0].description;
           var currentTemp = Math.round(data.main.temp * 1.8 + 32) + "°F";
-          msg.reply("It is currently " + currentTemp + " in " + data.name + ".");
+          var message0 = 'It\'s always cloudy for me, but in *' + data.name + '*, it is *' + currentTemp + '* and  *' + currentConditions + '*.';
+          var message1 = 'Ugh, if you must know what it\'s like outside in *' + data.name + '*, it is *' + currentTemp + '* and  *' + currentConditions + '*.';
+          var message2 = 'A brain the size of a planet and I\'m reporting the weather. Very well, in *' + data.name + '*, it is *' + currentTemp + '* and  *' + currentConditions + '*.';
+          msg.reply(randomMsg[Math.floor((Math.random()*(randomMsg.length)))]);
         }
       });
     }

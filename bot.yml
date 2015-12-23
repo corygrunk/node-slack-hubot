@@ -2,10 +2,6 @@ name: Marvin
 description: A simple hubot based node bot sample for Beep Boop
 avatar: marvin.png
 config:
-- name: HUBOT_BLACKLIST
-  friendly_name: Bot Channel Blacklist
-  info: Make the bot inactive in these channels - comma seperated/no spaces
-  type: text
 - name: HUBOT_BLACKLIST_PATH
   friendly_name: Path to Blacklist JSON file
   info: Path to json file. Json file contains array of channels
@@ -21,4 +17,12 @@ config:
 - name: HUBOT_JIRA_LINKIFIER_PROJECT_PREFIXES
   friendly_name: Jira Project Prefixes
   info: Jira Project Prefixes - comma seperated
+  type: text
+- name: HUBOT_RECURLY_PRIVATE_API
+  friendly_name: Recurly Private API
+  info: API Key Recurly
+  type: secret
+- name: HUBOT_RECURLY_SUBDOMAIN
+  friendly_name: Recurly Subdomain
+  info: Recurly Subdomain
   type: text

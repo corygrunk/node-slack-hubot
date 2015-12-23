@@ -1,5 +1,7 @@
 [
 	"marvin-responses",
 	"weather",
-	"hubot-jira-linkifier"
+	"hubot-jira-linkifier",
+	"recurly-detect-new",
+	"recurly"
 ]

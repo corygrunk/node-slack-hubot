@@ -7,9 +7,7 @@
 #  HUBOT_JIRA_LINKIFIER_PROJECT_PREFIXES
 #
 # Commands:
-#   hubot jl url      - Responds with the configured Jira base URL
-#   hubot jl prefixes - Responds with the configured Jira project prefixes to build URLs for e.g. "DEV" for DEV-111
-#   hubot jl regex    - Responds with the configured Jira base URL, currently just for debugging
+#   <jira issue number> - Responds with a link to the Jira issue
 #
 #
 # Author:
@@ -32,9 +30,18 @@ module.exports = (robot) ->
 
   ticketRegExp = new RegExp "(^|\\s+)(#{prefixes.join('|')})-[0-9]+($|\\s+)", "gi"
 
+  response01 = "Call that job satisfaction\? \‘Cos I don’t. Either way, here\'s the link\: "
+  response02 = "Not that anyone cares, but here is a link to that\: "
+  response03 = "Here I am, brain the size of a planet, and I\'m fetching Jira links\: "
+  responses = [
+    response01
+    response02
+    response03
+  ]
+
   robot.hear ticketRegExp, (res) ->
     for ticketMatch in res.match
-      res.send "Here's a link: " + "#{jiraUrl}/browse/#{ticketMatch.trim().toUpperCase()}"
+      res.send responses[Math.floor((Math.random()*(responses.length)))] + "#{jiraUrl}/browse/#{ticketMatch.trim().toUpperCase()}"
 
 
   # TODO: debug print the generated regex, remove me

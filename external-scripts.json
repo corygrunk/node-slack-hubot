@@ -1,7 +1,5 @@
 [
     "hubot-help",
     "hubot-thank-you",
-    "hubot-seen",
-    "hubot-google-images",
 		"hubot-slack-blacklist-middleware"
 ]
