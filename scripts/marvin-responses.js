@@ -59,7 +59,7 @@ module.exports = function(robot) {
 
     robot.respond(/hi/i, function (res){
         var response01 = "Ugh, like you care.";
-        var response02 = "Hi? I'm low";
+        var response02 = "Hi? I'm low.";
         var randomResponse = [response01,response02];
         res.reply(randomResponse[Math.floor((Math.random()*(randomResponse.length)))]);
     });
