@@ -8,6 +8,7 @@
 //   None
 //
 // Commands:
+// hubot hi
 // hubot quote
 // hubot how are you?
 // hubot are you happy?
@@ -54,6 +55,13 @@ module.exports = function(robot) {
 
     robot.respond(/how smart are you/i, function (res){
         res.reply("I am at a rough estimate thirty billion times more intelligent than you. Let me give you an example. Think of a number, any number... Wrong. You see?");
+    });
+
+    robot.respond(/hi/i, function (res){
+        var response01 = "Ugh, like you care.";
+        var response02 = "Hi? I'm low";
+        var randomResponse = [response01,response02];
+        res.reply(randomResponse[Math.floor((Math.random()*(randomResponse.length)))]);
     });
 
     robot.respond(/what is (.*)/i, function (res){
