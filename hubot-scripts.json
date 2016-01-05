@@ -1,5 +1,4 @@
 [
-	"marvin-responses",
-	"weather",
-	"hubot-jira-linkifier"
+	"jira-linkifier",
+	"marvin-ai"
 ]
