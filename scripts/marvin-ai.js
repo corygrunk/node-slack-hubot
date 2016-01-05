@@ -46,10 +46,9 @@ module.exports = function (robot) {
         //
         // EMPTY OUTCOMES of LOW CONFIDENCE
         //
-        if (confidence > confidenceThres) {
+        if (confidence < confidenceThres) {
           // TO DO - ADD REGEX HERE FOR OTHER RESPONSES
-          console.log('Confidence: ' + confidence + ' / Thresh: ' + confidenceThres);
-          res.reply('Sorry, I don\'t understand what you\'re asking. I\'m sure it\'s you and not me.');
+          res.reply('Sorry, I\'m not sure I understand. I\'m sure it\'s you and not me.');
         }
         //
         // HELLO
