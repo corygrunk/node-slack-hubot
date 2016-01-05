@@ -37,10 +37,18 @@ module.exports = function (robot) {
         //console.log('Intent: ' + intent + " / " + confidence);
         //console.log(entities);
         //
+        // EMPTY OUTCOMES
+        //
+        if (responseJson.outcomes === []) {
+          // TO DO - ADD REGEX HERE FOR OTHER RESPONSES
+          //res.reply('Sorry, I don\'t understand what you\'re asking. I\'m sure it\'s you and not me.');
+        }
+        //
         // EMPTY OUTCOMES of LOW CONFIDENCE
         //
-        if (responseJson.outcomes === [] || confidence > confidenceThres) {
+        if (confidence > confidenceThres) {
           // TO DO - ADD REGEX HERE FOR OTHER RESPONSES
+          console.log('Confidence: ' + confidence + ' / Thresh: ' + confidenceThres);
           res.reply('Sorry, I don\'t understand what you\'re asking. I\'m sure it\'s you and not me.');
         }
         //
