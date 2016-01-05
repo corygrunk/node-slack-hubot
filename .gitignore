@@ -3,3 +3,4 @@ node_modules
 .hubot_history
 npm-debug.log
 .env
+command-to-start-locally.txt

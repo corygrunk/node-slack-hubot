@@ -21,7 +21,8 @@ module.exports = function (robot) {
   APIKEY = process.env.HUBOT_WIT_AI_TOKEN || null;
   
   robot.respond(/(.*)/i, function (res) {
-    var userText = res.match[1].replace(/ /g,"%20"); // Striping out spaces for the api request
+    var userTextRaw = res.match[1];
+    var userText = userTextRaw.replace(/ /g,"%20"); // Striping out spaces for the api request
     var apiUrl = 'https://api.wit.ai/message?v=20160104&q=' + userText;
     request.get(apiUrl, {
       'auth': {
@@ -36,16 +37,11 @@ module.exports = function (robot) {
         //console.log('Intent: ' + intent + " / " + confidence);
         //console.log(entities);
         //
-        // EMPTY OUTCOMES
+        // EMPTY OUTCOMES of LOW CONFIDENCE
         //
-        if (responseJson.outcomes === []) {
+        if (responseJson.outcomes === [] || confidence > confidenceThres) {
+          // TO DO - ADD REGEX HERE FOR OTHER RESPONSES
           res.reply('Sorry, I don\'t understand what you\'re asking. I\'m sure it\'s you and not me.');
-        }
-        //
-        // LOW CONFIDENCE
-        //
-        if (confidence > confidenceThres) {
-          res.reply('What are you asking\? Try simpler terms. I\'m sure you\'re capable of that.');
         }
         //
         // HELLO
@@ -59,7 +55,7 @@ module.exports = function (robot) {
         //
         // WEATHER
         //
-        if (intent == 'Weather' && confidence > confidenceThres) {
+        if (intent === 'Weather' && confidence > confidenceThres) {
           var WX_APIKEY;
           WX_APIKEY = process.env.HUBOT_OWM_APIKEY || null;
           var getWx = function (callback) {

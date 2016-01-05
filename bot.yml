@@ -18,3 +18,7 @@ config:
   friendly_name: Jira Project Prefixes
   info: Jira Project Prefixes - comma seperated
   type: text
+- name: HUBOT_WIT_AI_TOKEN
+  friendly_name: Wit.ai Token
+  info: API Key Wit.ai
+  type: secret
