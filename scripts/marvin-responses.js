@@ -63,16 +63,16 @@ module.exports = function(robot) {
         var randomResponse = [response01,response02];
         res.reply(randomResponse[Math.floor((Math.random()*(randomResponse.length)))]);
     });
-
-    robot.respond(/what is (.*)/i, function (res){
-        var randomQuestion;
-        randomQuestion = res.match[1];
-        randomQuestion = randomQuestion.replace(/\?/g,'');
-        var response01 = "What is *" + randomQuestion + "*? What's the point, you wouldn't understand anyway.";
-        var response02 = "What is *" + randomQuestion + "*? It gives me a headache just trying to think down to your level.";
-        var response03 = "Don't pretend you want to talk to me, I know you hate me.";
-        var response04 = "What is *" + randomQuestion + "*? Sounds awful.";
-        var randomResponse = [response01,response02,response03,response04];
-        res.reply(randomResponse[Math.floor((Math.random()*(randomResponse.length)))]);
-    });
+    
+    // robot.respond(/what is (.*)/i, function (res){
+    //     var randomQuestion;
+    //     randomQuestion = res.match[1];
+    //     randomQuestion = randomQuestion.replace(/\?/g,'');
+    //     var response01 = "What is *" + randomQuestion + "*? What's the point, you wouldn't understand anyway.";
+    //     var response02 = "What is *" + randomQuestion + "*? It gives me a headache just trying to think down to your level.";
+    //     var response03 = "Don't pretend you want to talk to me, I know you hate me.";
+    //     var response04 = "What is *" + randomQuestion + "*? Sounds awful.";
+    //     var randomResponse = [response01,response02,response03,response04];
+    //     res.reply(randomResponse[Math.floor((Math.random()*(randomResponse.length)))]);
+    // });
 }
