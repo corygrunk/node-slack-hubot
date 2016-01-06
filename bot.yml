@@ -22,3 +22,7 @@ config:
   friendly_name: Wit.ai Token
   info: API Key Wit.ai
   type: secret
+- name: HUBOT_WIT_AI_MENTION_TOKEN
+  friendly_name: Wit.ai Mention Token
+  info: API Key Wit.ai
+  type: secret

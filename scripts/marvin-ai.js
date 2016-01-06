@@ -48,7 +48,11 @@ module.exports = function (robot) {
         //
         if (confidence < confidenceThres) {
           // TO DO - ADD REGEX HERE FOR OTHER RESPONSES
-          res.reply('Sorry, I\'m not sure I understand. I\'m sure it\'s you and not me.');
+          if (userTextRaw == '') {
+            
+          } else {
+            res.reply('Sorry, I\'m not sure I understand. I\'m sure it\'s you and not me.');
+          }
         }
         //
         // HELLO
