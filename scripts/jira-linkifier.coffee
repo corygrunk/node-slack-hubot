@@ -13,8 +13,8 @@
 # Author:
 #   Chris Coveney <xkickflip@gmail.com>
 
-dotenv = require("dotenv")
-dotenv.load()
+# dotenv = require("dotenv")
+# dotenv.load()
 
 module.exports = (robot) ->
 
