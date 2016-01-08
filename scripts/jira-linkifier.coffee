@@ -14,6 +14,7 @@
 #   Chris Coveney <xkickflip@gmail.com>
 
 dotenv = require("dotenv")
+dotenv.config silent: true
 dotenv.load()
 
 module.exports = (robot) ->
