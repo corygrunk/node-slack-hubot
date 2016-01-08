@@ -13,10 +13,6 @@
 # Author:
 #   Chris Coveney <xkickflip@gmail.com>
 
-dotenv = require("dotenv")
-dotenv.config silent: true
-dotenv.load()
-
 module.exports = (robot) ->
 
   # ENV variable for list of project prefixes
