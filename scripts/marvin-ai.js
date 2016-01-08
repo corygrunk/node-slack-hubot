@@ -10,6 +10,10 @@
 // Commands:
 //   Anything, he learns.
 
+var dotenv = require('dotenv');
+  dotenv.config({silent: true});
+  dotenv.load();
+
 var request = require('request');
 
 var confidenceThres = 0.6;
