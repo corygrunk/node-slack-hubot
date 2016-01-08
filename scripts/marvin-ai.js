@@ -10,8 +10,8 @@
 // Commands:
 //   Anything, he learns.
 
-// var dotenv = require('dotenv');
-// dotenv.load();
+var dotenv = require('dotenv');
+dotenv.load();
 
 var request = require('request');
 
