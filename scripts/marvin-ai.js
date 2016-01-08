@@ -27,7 +27,7 @@ module.exports = function (robot) {
     var apiUrl = 'https://api.wit.ai/message?v=20160104&q=' + userText;
 
     // TRAP STATIC RESPONSES LIKE 'HELP'
-    if (userTextRaw === 'help') {
+    if (userTextRaw == 'help' || userTextRaw == 'Help') {
       console.log('I\'m helping.');
     } else {
     // GO TO WIT FOR THE RESPONSE
