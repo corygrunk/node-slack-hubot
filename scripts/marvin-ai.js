@@ -73,6 +73,15 @@ module.exports = function (robot) {
             res.reply(randomResponse[Math.floor((Math.random()*(randomResponse.length)))]);
           }
           //
+          // GOODBYE
+          //
+          if (intent === 'Goodbye' && confidence > confidenceThres) {
+            var response01 = "Good bye. At least you decided to talk to me.";
+            var response02 = "Bye. Remember not to panic.";
+            var randomResponse = [response01,response02];
+            res.reply(randomResponse[Math.floor((Math.random()*(randomResponse.length)))]);
+          }
+          //
           // WEATHER
           //
           if (intent === 'Weather' && confidence > confidenceThres) {
